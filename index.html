@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación avanzada de gestión de tareas con múltiples características">
+    <meta name="keywords" content="tareas, productividad, todo list, organización">
+    <meta name="author" content="Tu Nombre">
+    <title>Lista de Tareas Premium - Gestión Avanzada</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <div class="header-left"></div>
+                <div class="header-center">
+                    <h1>📝 Lista de Tareas Premium</h1>
+                    <p>Gestión avanzada de tareas con múltiples características</p>
+                </div>
+                <div class="header-right">
+                    <button id="themeToggle" class="theme-toggle" title="Cambiar tema">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Task Configuration -->
+            <section class="task-config">
+                <select id="categorySelect" class="config-select">
+                    <option value="personal">👤 Personal</option>
+                    <option value="trabajo">💼 Trabajo</option>
+                    <option value="estudio">📚 Estudio</option>
+                    <option value="salud">💪 Salud</option>
+                    <option value="compras">🛒 Compras</option>
+                </select>
+
+                <select id="prioritySelect" class="config-select">
+                    <option value="baja">🟢 Prioridad Baja</option>
+                    <option value="media" selected>🟡 Prioridad Media</option>
+                    <option value="alta">🔴 Prioridad Alta</option>
+                </select>
+
+                <select id="sortSelect" class="config-select">
+                    <option value="date">📅 Por Fecha</option>
+                    <option value="priority">⚡ Por Prioridad</option>
+                    <option value="alphabetical">🔤 Alfabético</option>
+                </select>
+            </section>
+
+            <!-- Add Task Section -->
+            <section class="add-task-section">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Escribe una nueva tarea..."
+                    class="task-input"
+                >
+                <button id="addButton" class="btn-add">
+                    <span>➕</span> Agregar
+                </button>
+            </section>
+
+            <!-- Stats -->
+            <section class="stats">
+                <div class="stat-card stat-pending">
+                    <div class="stat-value" id="pendingCount">0</div>
+                    <div class="stat-label">Pendientes</div>
+                </div>
+                <div class="stat-card stat-completed">
+                    <div class="stat-value" id="completedCount">0</div>
+                    <div class="stat-label">Completadas</div>
+                </div>
+                <div class="stat-card stat-total">
+                    <div class="stat-value" id="totalCount">0</div>
+                    <div class="stat-label">Total</div>
+                </div>
+            </section>
+
+            <!-- Search -->
+            <section class="search-section">
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Buscar tareas..."
+                        class="search-input"
+                    >
+                </div>
+            </section>
+
+            <!-- Controls -->
+            <section class="controls">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">
+                        Todas <span class="filter-count" id="allCount">0</span>
+                    </button>
+                    <button class="filter-btn" data-filter="pending">
+                        Pendientes <span class="filter-count" id="pendingFilterCount">0</span>
+                    </button>
+                    <button class="filter-btn" data-filter="completed">
+                        Completadas <span class="filter-count" id="completedFilterCount">0</span>
+                    </button>
+                </div>
+
+                <div class="actions">
+                    <button id="exportBtn" class="action-btn" title="Exportar tareas">
+                        💾
+                    </button>
+                    <label class="action-btn" title="Importar tareas">
+                        📂
+                        <input type="file" id="importInput" accept=".json" style="display: none;">
+                    </label>
+                    <button id="clearCompletedBtn" class="action-btn action-danger" title="Eliminar completadas">
+                        🗑️
+                    </button>
+                </div>
+            </section>
+
+            <!-- Tasks List -->
+            <section class="tasks-section">
+                <ul id="taskList" class="task-list"></ul>
+                <div id="emptyState" class="empty-state">
+                    🎯 No hay tareas. ¡Agrega una para comenzar!
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>✨ Desarrollado con HTML, CSS y JavaScript Vanilla</p>
+            <p>Prueba Técnica Premium - 2024</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
