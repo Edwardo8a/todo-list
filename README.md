@@ -118,6 +118,7 @@ Eduardo Ochoa Almaraz
 ## 📄 Licencia
 
 Este proyecto fue desarrollado como parte de una prueba técnica.
+[Demo en Vivo](https://edwardo8a.github.io/todo-list/) | [Reportar Bug](https://github.com/Edwardo8a/todo-list/issues) | [Solicitar Función](https://github.com/Edwardo8a/todo-list/issues)
 
 ---
 
