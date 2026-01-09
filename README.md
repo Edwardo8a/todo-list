@@ -113,7 +113,7 @@ La aplicación se adapta perfectamente a diferentes tamaños de pantalla:
 
 ## 👨‍💻 Autor
 
-[Tu Nombre]
+Eduardo Ochoa Almaraz
 
 ## 📄 Licencia
 
